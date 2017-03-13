@@ -10,6 +10,7 @@
 
 #transactions {
    flex-basis: 60%;
+   margin-top: 10px;
 }
 
 #add-transaction-button, .remove-transaction-button {
@@ -23,4 +24,18 @@
 
 input {
    display: inline-block;
+}
+
+li {
+   margin-bottom: 10px;
+}
+
+#render-plot {
+   display: inline-block;
+   border: black solid 1px;
+   border-radius: 3px;
+   cursor: pointer;
+   text-align: center;
+   padding: 5px;
+   margin-top: 10px;
 }
