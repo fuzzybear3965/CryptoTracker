@@ -1,0 +1,26 @@
+#container {
+   display: flex;
+   justify-content: space-around;
+   align-items: flex-start;
+}
+
+#chart, #transactions {
+   display: inline;
+}
+
+#transactions {
+   flex-basis: 60%;
+}
+
+#add-transaction-button, .remove-transaction-button {
+   display: inline-block;
+   border: black solid 1px;
+   border-radius: 1px;
+   cursor: pointer;
+   width: 20px;
+   text-align: center;
+}
+
+input {
+   display: inline-block;
+}
