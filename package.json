@@ -1,0 +1,21 @@
+{
+  "name": "cointracker",
+  "version": "1.0.0",
+  "description": "A multi-coin cryptocurrency tracker.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "John Rinehart",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.6.2",
+    "express": "^4.15.2",
+    "pug": "^2.0.0-beta11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fuzzybear3965/CoinTracker.git"
+  }
+}

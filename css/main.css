@@ -1,41 +1,71 @@
 #container {
    display: flex;
-   justify-content: space-around;
+   justify-content: space-between;
    align-items: flex-start;
+   height: 100%;
 }
 
 #chart, #transactions {
    display: inline;
 }
 
-#transactions {
-   flex-basis: 60%;
+#transactions, #addressInput {
+   flex-basis: 40%;
    margin-top: 10px;
+   margin-right: 5%;
 }
 
-#add-transaction-button, .remove-transaction-button {
-   display: inline-block;
-   border: black solid 1px;
-   border-radius: 1px;
-   cursor: pointer;
-   width: 20px;
+#inputContainer {
+   display: flex;
+}
+
+#upload-json-history-and-render-transactions-and-plot-container {
    text-align: center;
+   margin: 0 0 14px 0;
 }
 
-input {
+#upload-render-button-container {
    display: inline-block;
+   text-align: center;
+   margin: 0 20px 0 20px;
 }
 
-li {
-   margin-bottom: 10px;
-}
-
-#render-plot {
-   display: inline-block;
+#upload-json-history, #render-plot, #render-transactions {
    border: black solid 1px;
    border-radius: 3px;
    cursor: pointer;
-   text-align: center;
    padding: 5px;
-   margin-top: 10px;
+   display: inline-block;
+   /*text-align: center;*/
+   margin: 0 20px 0 20px;
 }
+
+.address {
+   border: black dashed 1px;
+   padding: 3px;
+   border-radius: 3px;
+   margin: 0 0 8px 12px;
+   display: inline-block;
+}
+
+pre {
+   overflow-y: hidden;
+}
+/*#add-transaction-button, .remove-transaction-button {*/
+   /*display: inline-block;*/
+   /*border: black solid 1px;*/
+   /*border-radius: 1px;*/
+   /*cursor: pointer;*/
+   /*width: 20px;*/
+   /*text-align: center;*/
+/*}*/
+
+/*input {*/
+   /*display: inline-block;*/
+/*}*/
+
+/*li {*/
+   /*margin-bottom: 10px;*/
+   /*display: flex;*/
+/*}*/
+

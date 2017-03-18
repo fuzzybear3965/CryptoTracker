@@ -1,0 +1,68 @@
+<html>
+   <head>
+      <link rel="stylesheet" href="css\reset.css" type="text/css" media="screen" title="no title" charset="utf-8">
+      <link rel="stylesheet" href="https://unpkg.com/flatpickr/dist/flatpickr.min.css">
+      <link rel="stylesheet" href="css\main.css" type="text/css" media="screen" title="no title" charset="utf-8">
+      <!--Load the AJAX API-->
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script src="https://unpkg.com/flatpickr"></script>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   </head>
+
+   <body>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+      <!--Div that will hold the pie chart-->
+      <div id="container">
+         <div id="chart"></div>
+         <div id="transactions">
+            <ol>
+               <li>Hey</li>
+            </ol>
+         </div>
+
+         <div id="addressInput">
+            <div id="inputContainer">
+               <input placeholder="Address" type="text">  <a class="btn-floating
+               waves-effect"><i class="material-icons">add</i></a>
+            </div>
+            <div id="upload-json-history-and-render-transactions-and-plot-container">
+               <div id="upload-render-button-container">
+                  <div id="upload-json-history">
+                     <input type="file" id="json-history"
+                                        onchange="handleFiles(event)" />
+                  </div>
+                  <div id="render-transactions">
+                     <p>Render Transactions </p>
+                  </div>
+                  <div id="render-plot">
+                     <p>Render Plot</p>
+                  </div>
+               </div>
+            </div>
+            <div id="addressOutput"> </div>
+            <div><p>
+               *JSON format: <pre id="json-format">
+               [{ "in_curr":"CAD", "out_curr": "XBT",
+                  "in_addr":"1Yaosneuhoaestnu", "out_addr": "1Zasonetuheotsnh",
+                  "sent":"UTC-DATE","received":"UTC-DATE" },
+                { "in_curr":"USD", "out_curr": "ETH",
+                  "in_addr":"1Yaosneuhoaestnu", "out_addr": "1Zasonetuheotsnh",
+                  "sent":"UTC-DATE","received":"UTC-DATE" }
+                  ]
+               </pre>
+               </p> </div>
+         </div>
+      </div>
+   </body>
+   <script src="js\buttons.js"></script>
+</html>
