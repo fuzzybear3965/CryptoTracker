@@ -1,7 +1,7 @@
-CoinTracker
+CryptoTracker
 ===========
 
-CoinTracker is an Application to track the growth of your coin's assets over
+CryptoTracker is an Application to track the growth of your coin's assets over
 time. Currency exchanges get very complicated, very quickly. A purchase of one
 coin on one day will have a different value than that coin exchanged week's
 later for another coin. So, this tracker will allow you to indicate currencies
