@@ -24,6 +24,6 @@ function addkey(evt){
 
 var submitEl = document.getElementById("submit");
 submitEl.addEventListener("click",function(){
-	socket.emit('chat message', JSON.stringify(listofkeys));
+   socket.emit('keys', listofkeys);
 	return false;
 });

@@ -57,5 +57,10 @@ var server = app.listen(3000);
 var io = require('socket.io').listen(server);
 
 io.sockets.on('connection', function (socket) {
-   console.log("new user");
+   console.log(socket.id);
+   socket.on('keys', function (data) {
+      keys = data;
+      console.log(keys)
+   })
 });
+
