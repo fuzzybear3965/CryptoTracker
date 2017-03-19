@@ -9,7 +9,10 @@ var homeController = require('./controllers/home');
 
 // Create the Express application
 var app = express();
-
+var port = process.env.PORT || 80;
+// request-promise for blockchain APIs
+var rp = require('request-promise');
+app.set('rp',rp);
 // add content compression middleware
 app.use(compression({"threshold": "false"}));
 
@@ -25,11 +28,8 @@ app.set('view engine', 'pug');
 var router = express.Router();
 
 // Root route
-//router.get('/', function(req, res) {
-   //res.locals.ip = req.ip;
-   //res.render('home');
-//});
-router.get('/', homeController.index);
+router.get('/', homeController.getIndex);
+router.post('/', homeController.postIndex);
 
 // Register the route with Express
 app.use(router);

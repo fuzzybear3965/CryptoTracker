@@ -1,7 +1,6 @@
 extends layout
 
 block content
-   h1 CoinTracker is here!
-   h2 You are visitng from #{ip}
-   p this is some text
-   img(src="/img/b.jpg")
+   p #{data}
+   form(type='/', method='post')
+      input(type='submit',value='Submit')
