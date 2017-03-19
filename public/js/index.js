@@ -1,8 +1,3 @@
-const calc = require('./calc')
-
-const numbersToAdd = [ 3, 4, 10, 2]
-
-const result = calc.sum(numbersToAdd)
-console.log(`The result is ${result}`)
-
-
+// var examplesocket = new Websocket("ws://localhost:3001")
+// examplesocket.send("data")
+var socket = io();

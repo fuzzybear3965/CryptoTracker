@@ -2,10 +2,16 @@ extends layout
 
 block content
    div#curve_chart
-
-   form(name="addkey",method="POST")
-      div.input
-         span.label Public Key
-         input(type="text", value="test", name="pubkey", id='pubkey')
-      div.actions
-         input(type="submit", value="add")
+   div#listofkeys
+   select(id="curr", name="curr")
+      option(value="a") a
+      option(value="b") b
+      option(value="c") c
+      option(value="d") d
+   div.input
+      span.label Public Key
+      input(type="text", value="test", name="pubkey", id='pubkey')
+      button(type='button', id="addkey") add
+      br
+      button(type="button",id="submit") submit  
+   script(src="/js/eventlistener.js")
