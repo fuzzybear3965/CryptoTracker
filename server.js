@@ -15,18 +15,10 @@ var rp = require('request-promise');
 app.set('rp',rp);
 // add content compression middleware
 app.use(compression({"threshold": "false"}));
-app.use(bodyParser())
-// app.use(bodyParser.urlencoded({
-//     extended: true
-// }));
-
-// *bodyParser.json(options)
-//  * Parses the text as JSON and exposes the resulting object on req.body.
- 
-// app.use(bodyParser.json());
-
-
-
+ app.use(bodyParser.urlencoded({
+     extended: true
+ }));
+app.use(bodyParser.json());
 
 // Add static middleware
 var oneDay = 86400000;
