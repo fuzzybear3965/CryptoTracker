@@ -1,4 +1,3 @@
-//require('./app/index')
 // Load required packages
 var express = require('express');
 var compression = require('compression');
@@ -53,4 +52,10 @@ router.post('/', function(req,res) {
 app.use(router);
 
 // Start the serer
-app.listen(3000);
+var server = app.listen(3000);
+// socket.io
+var io = require('socket.io').listen(server);
+
+io.sockets.on('connection', function (socket) {
+   console.log("new user");
+});
