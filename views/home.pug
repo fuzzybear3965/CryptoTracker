@@ -1,6 +1,12 @@
 extends layout
 
 block content
-   p #{data}
-   form(type='/', method='post')
-      input(type='submit',value='Submit')
+   p this is some hello
+   div#curve_chart
+
+   form(name="addkey",method="POST")
+        div.input
+            span.label Public Key
+            input(type="text", value="test", name="pubkey", id='pubkey')
+        div.actions
+            input(type="submit", value="add")

@@ -3,7 +3,7 @@
 var express = require('express');
 var compression = require('compression');
 var path = require('path');
-
+var bodyParser = require('body-parser');	
 // Load controllers
 var homeController = require('./controllers/home');
 
@@ -15,6 +15,18 @@ var rp = require('request-promise');
 app.set('rp',rp);
 // add content compression middleware
 app.use(compression({"threshold": "false"}));
+app.use(bodyParser())
+// app.use(bodyParser.urlencoded({
+//     extended: true
+// }));
+
+// *bodyParser.json(options)
+//  * Parses the text as JSON and exposes the resulting object on req.body.
+ 
+// app.use(bodyParser.json());
+
+
+
 
 // Add static middleware
 var oneDay = 86400000;
@@ -30,6 +42,11 @@ var router = express.Router();
 // Root route
 router.get('/', homeController.getIndex);
 router.post('/', homeController.postIndex);
+
+router.post('/', function(req,res) {
+	console.log(req.body);
+res.render('submit', { title: req.body.pubkey});
+});
 
 // Register the route with Express
 app.use(router);
